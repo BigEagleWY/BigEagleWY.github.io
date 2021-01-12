@@ -58,7 +58,7 @@ html {
     height: 200px;
     display: inline-block;
     vertical-align: middle;
-    background-color: red;
+    background-color: blue;
 }
 .scroll-line-item:nth-child(odd){
     background-color: green;
