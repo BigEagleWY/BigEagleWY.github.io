@@ -23,7 +23,7 @@ html {
     background-color: #eee;
     -webkit-overflow-scrolling:auto;
 }
-/* 
+
 .scroll-container::-webkit-scrollbar {
     height: 16px;
     background-color: transparent;
@@ -45,7 +45,7 @@ html {
 .scroll-container::-webkit-scrollbar-thumb {
     background-color: #4285f4;
     border-radius: 16px;
-} */
+}
 
 
 .scroll-line {
