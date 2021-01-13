@@ -17,14 +17,14 @@ html {
 
 .scroll-container {
     width: 100%;
-    height: 200px;
+    height: 220px;
     overflow-x: auto;
     overflow-y: hidden;
     background-color: #eee;
-    -webkit-overflow-scrolling:auto;
+    -webkit-overflow-scrolling: auto;
 }
 
-.scroll-container::-webkit-scrollbar {
+/* .scroll-container::-webkit-scrollbar {
     height: 16px;
     background-color: transparent;
     padding: 0 200px;
@@ -45,7 +45,7 @@ html {
 .scroll-container::-webkit-scrollbar-thumb {
     background-color: #4285f4;
     border-radius: 16px;
-}
+} */
 
 
 .scroll-line {
@@ -53,13 +53,36 @@ html {
     height: 200px;
 }
 
-.scroll-line-item{
+.scroll-line-item {
     width: 40px;
     height: 200px;
     display: inline-block;
     vertical-align: middle;
     background-color: blue;
 }
-.scroll-line-item:nth-child(odd){
+
+.scroll-line-item:nth-child(odd) {
     background-color: green;
+}
+
+
+#scroll-container-id .simplebar-track {
+    left: 150px;
+    right: 150px;
+    background-color: rgba(66, 133, 244, 0.3);
+    height: 16px;
+    border-radius: 16px;
+
+}
+
+#scroll-container-id .simplebar-scrollbar {
+    top: 0;
+}
+
+#scroll-container-id .simplebar-scrollbar:before {
+    background-color: #4285f4;
+    opacity: 1;
+    height: 16px;
+    border-radius: 16px;
+
 }

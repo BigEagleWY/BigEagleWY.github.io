@@ -11,12 +11,13 @@
     <meta http-equiv="Expires" content="0">
     <title>滚动条样式调试</title>
     <link rel="stylesheet" href="./style.css?t=123456" />
+    <link rel="stylesheet" href="https://unpkg.com/simplebar@latest/dist/simplebar.css" />
 </head>
 
 <body>
 
     <div class="body-container">
-        <div class="scroll-container">
+        <div class="scroll-container" id="scroll-container-id">
             <div class="scroll-line">
                 <div class="scroll-line-item"></div>
                 <div class="scroll-line-item"></div>
@@ -48,23 +49,20 @@
                 <div class="scroll-line-item"></div>
                 <div class="scroll-line-item"></div>
                 <div class="scroll-line-item"></div>
-                
+
             </div>
         </div>
     </div>
-    <!-- <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://cdn.bootcdn.net/ajax/libs/jquery.nicescroll/3.7.6/jquery.nicescroll.min.js"></script>
+
+    <script src="https://unpkg.com/simplebar@latest/dist/simplebar.min.js"></script>
     <script type="text/javascript">
         window.onload = function () {
-            $(".scroll-container").niceScroll({
-                cursorcolor: "#4285f4",
-                cursorwidth: "16px",
-                autohidemode: false,
-                cursorborderradius: "16px",
-                background: "rgba(66,133,244,0.3)",
+            new SimpleBar(document.getElementById('scroll-container-id'),{
+                autoHide:false,
             });
         }
-    </script> -->
+    </script>
+
 </body>
 
 </html>
