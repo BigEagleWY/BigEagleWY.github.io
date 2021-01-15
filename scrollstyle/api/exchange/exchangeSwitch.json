@@ -1,0 +1,10 @@
+{
+    "code": "string",
+    "data": [{
+        "tokenSwitch": true,
+        "type": 0
+    }],
+    "msg": "string",
+    "subCode": "string",
+    "subMsg": "string"
+}
