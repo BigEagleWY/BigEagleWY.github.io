@@ -48,6 +48,10 @@ html {
 } */
 
 
+.scroll-container{
+    -webkit-overflow-scrolling:unset;
+}
+
 .scroll-line {
     width: 1500px;
     height: 200px;
