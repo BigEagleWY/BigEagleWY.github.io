@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>websocket
+    </title>
+</head>
+
+<body>
+    <div id="root"></div>
+    <script>
+        window.onload = function () {
+            var dom = document.getElementById("root");
+            if ("WebSocket" in window) {
+                dom.innerHTML  = "支持WebSocket";
+            } else {
+                dom.innerHTML  = "不支持WebSocket";
+            }
+        }
+    </script>
+</body>
+
+</html>
