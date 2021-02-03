@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notification</title>
+</head>
+
+<body>
+    Notification
+
+    <script>
+        if (Notification.permission == "granted") {
+            console.log('用户允许通知1');
+            var n = new Notification('状态更新提醒', {
+                body: '你的朋友圈有3条新状态，快去查看吧',
+            })
+            setTimeout(function () {
+                n.close();
+            }, 3000);
+        } else if (Notification.permission == "denied") {
+            console.log('用户拒绝通知');
+        } else {
+            Notification.requestPermission().then(function (data) {
+                if (data == "granted") {
+                    console.log('用户允许通知2');
+                    console.log(Notification.permission)
+                    var n = new Notification('状态更新提醒', {
+                        body: '你的朋友圈有3条新状态，快去查看吧',
+                    })
+                    setTimeout(function () {
+                        n.close();
+                    }, 3000);
+                } else if (data == "denied") {
+                    console.log('用户拒绝通知');
+                } else {
+                    console.log('用户还没选择，去向用户申请权限吧');
+                }
+            });
+
+        }
+    </script>
+</body>
+
+</html>
