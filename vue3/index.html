@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>vue3</title>
+    <script src="https://unpkg.com/vue@next"></script>
+</head>
+<body>
+    <div id="app"></div>
+    <script>
+        Vue.createApp({
+            data(){
+                return {
+                    counter:1,
+                    content:"欢迎光临",
+                    showMeal:false,
+                    mealList:["低保套餐","经济套餐","豪华套餐","VIP套餐"],
+                    newMealValue:""
+                }
+            },
+            methods:{
+                addMeal(){
+                    this.mealList.push(this.newMealValue);
+                    this.newMealValue = "";
+                },
+                welcomeClick(){
+                    this.content = "欢迎光临";
+                    this.showMeal = true;
+                },
+                byeClick(){
+                    this.content = "欢迎下次光临";
+                    this.showMeal = false;
+                }
+            },
+            mounted(){
+                console.log("页面完成自动执行")
+                var _this = this;
+                setInterval(function () {
+                    _this.counter = _this.counter+1;
+                },1000);
+            },
+            template:`<div>
+                {{content}}{{counter}}
+                <br/>
+                <ul v-if="showMeal">
+                    <li v-for="item in mealList">{{item}}</li>
+                    
+                </ul>
+                <br/>
+                <input v-if="showMeal" v-model="newMealValue" />
+                <button v-if="showMeal"  v-on:click="addMeal">添加新套餐</button>
+                <br/>
+                <button v-on:click="welcomeClick">客人来了</button>
+                <button v-on:click="byeClick">客人走了</button>
+            </div>`
+        }).mount("#app");
+    </script>
+    
+</body>
+</html>

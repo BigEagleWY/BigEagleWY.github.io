@@ -1,0 +1,79 @@
+body,
+html {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 100%;
+    padding: 30px;
+}
+
+
+.dice-container {
+    width: 150px;
+    height: 150px;
+    border-radius: 10px;
+    border: 1px solid #999;
+    position: relative;
+    display: inline-block;
+    margin-right: 30px;
+}
+
+.dice-container .dice-dot-one {
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    background-color: red;
+    position: absolute;
+    left: 50px;
+    top: 50px;
+}
+
+.dice-container .dice-dot-two {
+    width: 30px;
+    height: 30px;
+    border-radius: 30px;
+    background-color:black;
+    position: absolute;
+    left: 40px;
+    top: 60px;
+}
+.dice-container .dice-dot-three {
+    width: 30px;
+    height: 30px;
+    border-radius: 30px;
+    background-color:black;
+    position: absolute;
+    left: 30px;
+    top: 30px;
+}
+.dice-container .dice-dot-four {
+    width: 30px;
+    height: 30px;
+    border-radius: 30px;
+    background-color:red;
+    position: absolute;
+    left: 30px;
+    top: 30px;
+}
+.dice-container .dice-dot-five {
+    width: 30px;
+    height: 30px;
+    border-radius: 30px;
+    background-color:black;
+    position: absolute;
+    left: 30px;
+    top: 30px;
+}
+.dice-container .dice-dot-six {
+    width: 30px;
+    height: 30px;
+    border-radius: 30px;
+    background-color:black;
+    position: absolute;
+    left: 30px;
+    top: 30px;
+}
