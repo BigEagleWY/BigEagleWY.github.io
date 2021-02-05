@@ -10,7 +10,7 @@
 <body>
     <div id="app"></div>
     <script>
-        Vue.createApp({
+       const app =  Vue.createApp({
             data(){
                 return {
                     counter:1,
@@ -42,6 +42,9 @@
                 },1000);
             },
             template:`<div>
+                <my-title 
+                    title="象牙山洗脚城123"
+                />
                 {{content}}{{counter}}
                 <br/>
                 <ul v-if="showMeal">
@@ -55,7 +58,14 @@
                 <button v-on:click="welcomeClick">客人来了</button>
                 <button v-on:click="byeClick">客人走了</button>
             </div>`
-        }).mount("#app");
+        });
+
+        app.component("my-title",{
+            props:["title"],
+            template: '<h1 style="text-align:center">{{title}}</h1>'
+        });
+
+        app.mount("#app");
     </script>
     
 </body>
