@@ -19,13 +19,16 @@
         div {
             box-sizing: border-box;
         }
+        img{
+            width: 100%;
+        }
     </style>
 </head>
 
 <body>
     <img src="" alt="" id="img">
 <button onclick="buttonClick()">点我拍照</button>
-<input type="file" id="input" style="display: none;" accept="image/*" >
+<input type="file" id="input" style="display: none;" accept="image/*" capture="camera" >
 <script>
     window.onload = function(){
         var img = document.getElementById("img")
