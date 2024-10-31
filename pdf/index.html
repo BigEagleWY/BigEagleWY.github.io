@@ -16,6 +16,13 @@
     </style>
 </head>
 <body>
-    <iframe src="./test.pdf" frameborder="0"></iframe>
+    <iframe id="pdf-container" src="" frameborder="0"></iframe>
+    <script >
+        window.onload = function(){
+            var pdfContainer = document.getElementById('pdf-container');
+            pdfContainer.src = `./web/viewer.html?file=${encodeURIComponent("/pdf/test.pdf")}`
+        }
+        
+    </script>
 </body>
 </html>
